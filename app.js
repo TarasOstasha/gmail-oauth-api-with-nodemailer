@@ -1,11 +1,12 @@
 const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
 require('dotenv').config()
+console.log(process.env.CLIENT_ID, 'proccess env')
 
-const CLIENT_ID = CLIENT_ID
-const CLIENT_SECRET = CLIENT_SECRET
-const REDIRECT_URI = REDIRECT_URI
-const REFRESH_TOKEN = REFRESH_TOKEN
+const CLIENT_ID = process.env.CLIENT_ID
+const CLIENT_SECRET = process.env.CLIENT_SECRET
+const REDIRECT_URI = process.env.REDIRECT_URI
+const REFRESH_TOKEN = process.env.REFRESH_TOKEN
 
 
 const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI)
